@@ -2,11 +2,12 @@
 
 **Goal**: Create minimal Nix development environment for Phoenix 1.8.0
 
-**Prerequisites**: Nix and devenv installed
+**Prerequisites**: Nix and devenv installed (check this via terminal first)
 
-**Estimated Time**: 3 minutes
+## 1.1
+Use devenv init to get things scaffolded
 
-## 1.1 Create devenv.nix
+## 1.2 Update devenv.nix
 
 ```nix
 { pkgs, lib, config, inputs, ... }:
@@ -84,12 +85,7 @@
     echo "  • Or run: bin/setup (after completing all steps)"
   '';
 }
-```
-
-## 1.2 Create .envrc
-
-```bash
-use devenv
+```evenv
 ```
 
 ## 1.3 Create devenv.yaml
