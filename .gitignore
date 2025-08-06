@@ -1,0 +1,113 @@
+# Elixir/Phoenix
+_build/
+deps/
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/
+erl_crash.dump
+
+# Phoenix static assets
+priv/static/assets/
+priv/static/cache_manifest.json
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Nix development environment
+.devenv/
+.direnv/
+result
+result-*
+
+# VS Code
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/.ropeproject
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+log/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+cover/
+
+# Dependency directories
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+
+# Test artifacts
+.mix_test_failures
+
+# Documentation
+doc/
+docs/
+
+# Release builds
+_build/prod/
+rel/
+*.tar.gz
+
+# Dialyzer
+.dialyzer_plt
+.dialyzer_plt.hash
+dialyzer.ignore-warnings
+
+# Sobelow
+.sobelow
+
+# Credo
+.credo.exs.bak
