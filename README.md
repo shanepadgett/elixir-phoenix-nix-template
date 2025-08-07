@@ -17,10 +17,16 @@ Phoenix 1.8.0 application template with Nix development environment.
 - [Nix](https://nixos.org/download.html) with flakes enabled
 - [devenv](https://devenv.sh/getting-started/)
 - [direnv](https://direnv.net/docs/installation.html) (recommended)
+- User added to Nix trusted-users (for Cachix binary cache)
 
 ### Installation
 
 ```bash
+# Add user to Nix trusted-users (one-time setup)
+echo "trusted-users = root $USER" | sudo tee -a /etc/nix/nix.conf
+sudo systemctl restart nix-daemon  # Linux
+# sudo launchctl kickstart -k system/org.nixos.nix-daemon  # macOS
+
 # Clone and enter directory
 git clone git@github.com:shanepadgett/elixir-phoenix-nix-template.git
 cd elixir-phoenix-nix-template
