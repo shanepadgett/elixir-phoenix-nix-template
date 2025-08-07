@@ -24,8 +24,8 @@ Phoenix 1.8.0 application template with Nix development environment.
 ```bash
 # Add user to Nix trusted-users (one-time setup)
 echo "trusted-users = root $USER" | sudo tee -a /etc/nix/nix.conf
-sudo systemctl restart nix-daemon  # Linux
-# sudo launchctl kickstart -k system/org.nixos.nix-daemon  # macOS
+sudo launchctl kickstart -k system/org.nixos.nix-daemon  # macOS
+# sudo systemctl restart nix-daemon  # Linux
 
 # Clone and enter directory
 git clone git@github.com:shanepadgett/elixir-phoenix-nix-template.git
