@@ -20,7 +20,7 @@ Phoenix 1.8.0 application with Nix development environment.
 - **Phoenix 1.8.0** with Bandit, LiveView 1.1
 - **Database**: PostgreSQL 17
 - **Styling**: TailwindCSS + daisyUI
-- **Runtime**: Elixir 1.19, Erlang 28
+- **Runtime**: Elixir 1.18, Erlang 25-27
 - **Environment**: Nix with devenv
 
 ## Setup

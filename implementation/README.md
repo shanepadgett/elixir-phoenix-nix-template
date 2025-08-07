@@ -6,7 +6,7 @@
 
 - Phoenix 1.8.0 (Bandit, LiveView 1.1, TailwindCSS + daisyUI)
 - PostgreSQL 17 managed by Nix services
-- Erlang 28.0.2 + Elixir 1.19
+- Erlang 25-27 + Elixir 1.18
 - Declarative development environment with devenv
 
 ## Implementation Steps

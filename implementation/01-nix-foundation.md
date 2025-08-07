@@ -47,7 +47,7 @@ Use devenv init to get things scaffolded
   languages = {
     elixir = {
       enable = true;
-      package = pkgs.elixir_1_19;
+      package = pkgs.elixir_1_18;
     };
   };
 
@@ -115,8 +115,8 @@ postgres --version
 ## Verification
 
 You should see:
-- Elixir 1.19.x
-- Erlang/OTP 28.x
+- Elixir 1.18.x
+- Erlang/OTP 25-27.x
 - PostgreSQL 17.x
 - Environment variables set correctly
 

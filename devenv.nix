@@ -34,7 +34,7 @@
   languages = {
     elixir = {
       enable = true;
-      package = pkgs.elixir_1_19;
+      package = pkgs.elixir_1_18;
     };
   };
 
