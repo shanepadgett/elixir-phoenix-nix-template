@@ -26,6 +26,7 @@
   packages = with pkgs; [
     git
     curl
+    bash
     postgresql_17
     lsof
   ];
@@ -54,11 +55,4 @@
       '';
     };
   };
-
-  # Shell configuration
-  enterShell = ''
-    echo "🚀 Phoenix 1.8.0 + Nix Development Environment"
-    echo "📦 Elixir $(elixir --version | head -n1)"
-    echo "🗄️  PostgreSQL 17 available on localhost:5432"
-  '';
 }
