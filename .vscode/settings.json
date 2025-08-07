@@ -1,0 +1,49 @@
+{
+  "elixirLS.dialyzerEnabled": false,
+  "elixirLS.fetchDeps": false,
+  "elixirLS.suggestSpecs": false,
+  "elixirLS.mixEnv": "dev",
+  "elixirLS.projectDir": ".",
+
+  "files.associations": {
+    "*.heex": "phoenix-heex",
+    "*.leex": "phoenix-heex"
+  },
+
+  "emmet.includeLanguages": {
+    "phoenix-heex": "html",
+    "elixir": "html"
+  },
+
+  "tailwindCSS.includeLanguages": {
+    "phoenix-heex": "html",
+    "elixir": "html"
+  },
+
+  "tailwindCSS.experimental.classRegex": [
+    ["class[:]\\s*\"([^\"]*)", "\"([^\"]*)\""],
+    ["class[:]\\s*'([^']*)", "'([^']*)'"]
+  ],
+
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/_build": true,
+    "**/deps": true,
+    "**/.devenv": true,
+    "**/priv/static": true
+  },
+
+  "files.watcherExclude": {
+    "**/_build/**": true,
+    "**/deps/**": true,
+    "**/.devenv/**": true,
+    "**/node_modules/**": true
+  }
+}

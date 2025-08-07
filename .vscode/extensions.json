@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "JakeBecker.elixir-ls",
+    "pinage404.nix-extension-pack",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
