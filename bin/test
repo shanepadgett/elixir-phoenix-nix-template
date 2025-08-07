@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -e
+
+# Check devenv shell
+if [[ -z "$DEVENV_SHELL" ]]; then
+  echo "❌ Not in devenv shell. Run 'devenv shell' first."
+  exit 1
+fi
+
+# Start services for test
+if ! pg_isready -h localhost -p 5432 -U postgres &>/dev/null; then
+  echo "📦 Starting services..."
+  devenv up -d
+  sleep 3
+fi
+
+# Setup test database if needed
+echo "🗄️  Preparing test database..."
+MIX_ENV=test mix ecto.create --quiet
+MIX_ENV=test mix ecto.migrate --quiet
+
+# Run tests
+echo "🧪 Running tests..."
+mix test "$@"

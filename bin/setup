@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+set -e
+
+echo "🚀 Setting up Phoenix development environment..."
+
+# Check devenv shell
+if [[ -z "$DEVENV_SHELL" ]]; then
+  echo "❌ Not in devenv shell. Run 'devenv shell' first."
+  exit 1
+fi
+
+# Start services
+if ! pg_isready -h localhost -p 5432 -U postgres &>/dev/null; then
+  echo "📦 Starting PostgreSQL..."
+  devenv up -d
+  sleep 3
+fi
+
+# Install Hex and Rebar
+echo "📦 Installing Hex and Rebar..."
+mix local.hex --force --if-missing
+mix local.rebar --force --if-missing
+
+# Install dependencies
+echo "📦 Installing dependencies..."
+mix deps.get
+
+# Setup assets
+echo "🎨 Setting up assets..."
+mix assets.setup
+
+# Setup database
+echo "🗄️  Setting up database..."
+mix ecto.create
+mix ecto.migrate
+
+# Compile
+echo "🔨 Compiling..."
+mix compile
+
+echo "✅ Setup complete!"
+echo "Start development: bin/dev"
